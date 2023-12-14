@@ -9,41 +9,31 @@ TT	Mô tả	Chức năng
 6	Bảng classuit	Thông tin lớp
 7	Bảng faculty	Thông tin khoa
  
-Hình 1 Cơ sở dữ liệu
+
+![image](https://github.com/VoTuanNam/StudentManagement/assets/142739440/3b754f76-fe71-4c03-a336-577255a456cc)
+a. Kiến trúc MVC
+ ![image](https://github.com/VoTuanNam/StudentManagement/assets/142739440/3c2f0351-92d9-494c-9cf3-bd84b2ba74f2)
+
+Hình 2 Mô hình MVC [6]
+Mô hình MVC (Model-View-Controller) là một mô hình kiến trúc phần mềm được sử dụng để phát triển các ứng dụng web. Mô hình này chia ứng dụng thành ba thành phần chính:
+−	Model: Mô hình đại diện cho dữ liệu và logic bussiness của ứng dụng.
+−	View: View là giao diện người dùng của ứng dụng.
+−	Controller: Controller là thành phần trung gian giữa model và view. Nó nhận yêu cầu từ người dùng và chuyển yêu cầu đến model để xử lý. Sau đó, controller nhận kết quả từ model và gửi kết quả đến view để hiển thị cho người dùng
 
 
-•	Giải thích chi tiết:
-Quan hệ	Thuộc tính	Kiểu dữ liệu	Diễn giải
-user	id	bigint(20)	Khoá chính
-	fullname	varchar(255)	Thông tin tên đăng nhập
-	password	varchar(255)	Thông tin mật khẩu
-	status	int(111)	Trạng thái hoạt động
-	username	varchar(255)	Thông tin họ tên người dùng
-role	id	bigint(20)	Khoá chính
-	code	varchar(255)	Thông tin phân quyền(ADMIN, USER)
-	name	varchar(255)	Thông tin tên phân quyền(Quản trị, Người dùng)
-user_role	id	bigint(20)	Khoá chính
-	userid	bigint(20)	Thông tin id người dùng
-	roleid	bigint(20)	Thông tin phân quyền (1-ADMIN, 2-USER)
-student	id	bigint(20)	Khoá chính
-	code	varchar(255)	Thông tin mã sinh viên
-	dateofbirth	varchar(255)	Thông tin ngày sinh
-	gender	varchar(255)	Thông tin giới tính
-	name	varchar(255)	Thông tin họ và tên
-	classUIT_id	bigint(20)	Thông tin mã lớp
-	faculty_id	bigint(20)	Thông tin mã khoa
-teacher	id	bigint(20)	Khoá chính
-	code	varchar(255)	Thông tin mã giáo viên
-	dateofbirth	varchar(255)	Thông tin ngày sinh
-	gender	varchar(255)	Thông tin giới tính
-	name	varchar(255)	Thông tin họ và tên
-	faculty_id	bigint(20)	Thông tin mã khoa
-classuit	id	bigint(20)	Khoá chính
-	classname	varchar(255)	Thông tin tên lớp
-	code	varchar(255)	Thông tin mã lớp
-	total	varchar(255)	Thông tin tổng số lượng
-	teacher_code	bigint(20)	Thông tin mã giáo viên
-faculty	id	bigint(20)	Khoá chính
-	code	varchar(255)	Thông tin mã khoa
-	facultyName	varchar(255)	Thông tin tên khoa
 
+b. Logic Dispatcher Servlet
+ ![image](https://github.com/VoTuanNam/StudentManagement/assets/142739440/79ea9b64-0b52-4342-82a2-ed50c6584f48)
+
+Hình 3 Logic Dispatcher Servlet
+Dispatcher servlet là một servlet được sử dụng để điều phối các yêu cầu HTTP đến các controller trong Spring MVC. Nó là một thành phần quan trọng của kiến trúc MVC của Spring và chịu trách nhiệm xử lý các yêu cầu HTTP, chuyển chúng đến các controller thích hợp và trả về phản hồi cho người dùng. [7]
+Dispatcher servlet hoạt động như sau:
+1.	Khi một yêu cầu HTTP được gửi đến ứng dụng, Dispatcher servlet sẽ nhận yêu cầu đó.
+2.	Dispatcher servlet sẽ sử dụng một servlet mapping để xác định controller nào sẽ xử lý yêu cầu.
+3.	Dispatcher servlet sẽ chuyển yêu cầu đến controller thích hợp.
+4.	Controller sẽ xử lý yêu cầu và trả về một đối tượng ModelAndView.
+5.	Dispatcher servlet sẽ sử dụng một view resolver để tìm view phù hợp với ModelAndView.
+6.	Dispatcher servlet sẽ trả về phản hồi cho người dùng.
+![image](https://github.com/VoTuanNam/StudentManagement/assets/142739440/38437f72-9af7-47fa-ae9b-440056d4d291)
+![image](https://github.com/VoTuanNam/StudentManagement/assets/142739440/7da9be44-6f91-4a7a-a420-7775a917e9c3)
+![image](https://github.com/VoTuanNam/StudentManagement/assets/142739440/21bfdefc-25f1-4127-929d-f1f49befb2d9)
