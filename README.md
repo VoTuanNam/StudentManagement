@@ -1,5 +1,6 @@
 ﻿# StudentManagement
 Chạy sản phẩm các bước sau
+
 Bước 1: Truy cập và update project.
 -	Khởi động spring tool suite 4 và truy cập đến file chứa ứng dụng.
 -	Click chuột phải vào project và chọn Maven install.
