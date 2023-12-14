@@ -1,4 +1,18 @@
 ﻿# StudentManagement
+Chạy sản phẩm các bước sau
+Bước 1: Truy cập và update project.
+-	Khởi động spring tool suite 4 và truy cập đến file chứa ứng dụng.
+-	Click chuột phải vào project và chọn Maven install.
+-	Click chuột phải vào file pom.xml và chọn update project.
+Bước 2: Cấu hình sever deploy.
+-	Chuột phải vào project và chọn run as > run on sever.
+-	Chọn Apache và chọn Tomcat 8.5 để deploy.
+Bước 3: Khởi chạy ứng dụng.
+-	Sau khi truy khởi chạy xong, từ trang trình duyệt web truy cập đến địa chỉ:
+http://localhost:8080/spring-mvc/dang-nhap
+-	Tiếp tục đăng nhập và thực hiện các chức năng của ứng dụng.
+ 
+
 Cơ sở dữ liệu quản lý sinh viên gồm 7 bảng:
 TT	Mô tả	Chức năng
 1	Bảng user	Thông tin người dùng
